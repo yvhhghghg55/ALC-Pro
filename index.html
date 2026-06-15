@@ -240,16 +240,16 @@
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                width: clamp(52px, 12vw, 120px);
+                width: clamp(100px, 28vw, 320px); /* allow much larger logos */
             }
             .header-content {
-                padding: 0 40px; /* reduce side padding to give more space for text */
+                padding: 0 110px; /* increase side padding to avoid overlap with larger logos */
                 width: 100%;
                 box-sizing: border-box;
             }
             /* Make the right logo larger and left logo standard */
             .logo-right {
-                max-width: clamp(200px, 36vw, 380px);
+                max-width: clamp(220px, 44vw, 520px);
             }
             .logo-left {
                 max-width: clamp(70px, 12vw, 100px);
