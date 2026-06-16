@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مركز الأمجاد للغات والتدريب | تعليم لغات احترافي</title>
-    <meta name="description" content="مركز الأمجاد - معهد تدريب لغات متخصص بخبرة عالية | دورات احترافية | معلمون متميزون">
+    <title>مركز الأمجاد للغات والتدريب</title>
 
     <style>
         :root {
@@ -13,19 +12,6 @@
             --white: #ffffff;
             --gray: #f5f7fa;
             --text: #333333;
-            --bg-light: #ffffff;
-            --bg-secondary: #f5f7fa;
-            --success: #27ae60;
-        }
-
-        html.dark-mode {
-            --blue: #0F5BB7;
-            --yellow: #FBE03F;
-            --white: #1a1a2e;
-            --gray: #16213e;
-            --text: #e0e0e0;
-            --bg-light: #16213e;
-            --bg-secondary: #0f3460;
         }
 
         * {
@@ -44,43 +30,12 @@
             color: var(--text);
             min-height: 100vh;
             line-height: 1.6;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        html.dark-mode body {
-            background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #0f3460 100%);
         }
 
         img {
             display: block;
             max-width: 100%;
             height: auto;
-        }
-
-        /* Dark Mode Toggle Button */
-        .theme-toggle {
-            position: fixed;
-            top: 80px;
-            left: 20px;
-            z-index: 1000;
-            background: var(--blue);
-            color: white;
-            border: none;
-            padding: 12px 16px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 15px rgba(15, 91, 183, 0.2);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 600;
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.05);
-            background: #0a3f7f;
         }
 
         header {
@@ -96,12 +51,6 @@
             border-bottom-right-radius: 40px;
             box-shadow: 0 20px 60px rgba(15, 91, 183, 0.18);
             min-height: clamp(300px, 36vh, 460px);
-            transition: box-shadow 0.3s ease;
-        }
-
-        html.dark-mode header {
-            background: linear-gradient(135deg, #1a2f5a 0%, #0f3460 100%);
-            box-shadow: 0 20px 60px rgba(15, 91, 183, 0.3);
         }
 
         .header-logo {
@@ -147,20 +96,19 @@
 
         h1 {
             margin-bottom: 15px;
-            font-size: clamp(1.8rem, 5vw, 2.8rem);
-            font-weight: 800;
+            font-size: clamp(1.6rem, 5vw, 2.6rem);
+            font-weight: 700;
             letter-spacing: 0.02em;
             line-height: 1.1;
         }
 
         .subtitle {
-            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-            color: rgba(255,255,255,0.95);
+            font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+            color: rgba(255,255,255,0.9);
             max-width: 620px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.7;
-            font-weight: 500;
+            line-height: 1.6;
         }
 
         .cards {
@@ -173,7 +121,7 @@
         }
 
         .card {
-            background: var(--bg-light);
+            background: var(--white);
             text-decoration: none;
             color: var(--text);
             border-radius: 28px;
@@ -185,12 +133,6 @@
             position: relative;
         }
 
-        html.dark-mode .card {
-            background: var(--bg-secondary);
-            box-shadow: 0 20px 40px rgba(15,91,183,0.15);
-            border: 1px solid rgba(15,91,183,0.2);
-        }
-
         .card:hover {
             transform: translateY(-12px);
             box-shadow: 0 30px 55px rgba(15,91,183,0.14);
@@ -200,7 +142,7 @@
             position: absolute;
             top: -12px;
             right: 20px;
-            background: var(--success);
+            background: #27ae60;
             color: white;
             padding: 4px 12px;
             border-radius: 20px;
@@ -232,29 +174,19 @@
             color: #0b3f86;
             margin-bottom: 12px;
             font-size: 1.35rem;
-            font-weight: 700;
-        }
-
-        html.dark-mode .card h2 {
-            color: #64b5f6;
         }
 
         .card p {
             margin-bottom: 25px;
             line-height: 1.8;
             color: #555;
-            font-size: 0.95rem;
-        }
-
-        html.dark-mode .card p {
-            color: #b0b0b0;
         }
 
         .btn {
             display: inline-block;
             background: linear-gradient(90deg, #fbe03f 0%, #f2c200 100%);
             color: #000;
-            padding: clamp(11px, 1.4vw, 14px) clamp(22px, 3vw, 30px);
+            padding: clamp(10px, 1.4vw, 14px) clamp(20px, 3vw, 28px);
             border-radius: 999px;
             font-weight: 700;
             border: none;
@@ -262,7 +194,6 @@
             box-shadow: 0 14px 25px rgba(251,224,63,0.18);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
             text-decoration: none;
-            font-size: 0.95rem;
         }
 
         .btn:hover {
@@ -270,41 +201,10 @@
             box-shadow: 0 18px 30px rgba(251,224,63,0.28);
         }
 
-        /* Trust Signals Section */
-        .trust-section {
-            max-width: 1100px;
-            margin: 60px auto 40px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-
-        .trust-item h3 {
-            color: #0b3f86;
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        html.dark-mode .trust-item h3 {
-            color: #64b5f6;
-        }
-
-        .trust-item p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        html.dark-mode .trust-item p {
-            color: #aaa;
-        }
-
         /* Contact Section - Main Page */
         .contact-widget-section {
             max-width: 1100px;
-            margin: 60px auto 50px;
+            margin: 60px auto 40px;
             padding: 0 20px;
         }
 
@@ -316,10 +216,6 @@
             font-weight: 700;
         }
 
-        html.dark-mode .contact-widget-title {
-            color: #64b5f6;
-        }
-
         .contact-widgets {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
@@ -327,7 +223,7 @@
         }
 
         .contact-widget {
-            background: var(--bg-light);
+            background: var(--white);
             padding: clamp(30px, 3vw, 40px);
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(15,91,183,0.08);
@@ -337,12 +233,6 @@
             text-decoration: none;
             color: var(--text);
             cursor: pointer;
-        }
-
-        html.dark-mode .contact-widget {
-            background: var(--bg-secondary);
-            box-shadow: 0 20px 40px rgba(15,91,183,0.15);
-            border: 1px solid rgba(15,91,183,0.2);
         }
 
         .contact-widget:hover {
@@ -360,11 +250,6 @@
             color: #0b3f86;
             margin-bottom: 10px;
             font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        html.dark-mode .contact-widget h3 {
-            color: #64b5f6;
         }
 
         .contact-widget p {
@@ -372,10 +257,6 @@
             margin-bottom: 20px;
             font-size: 0.95rem;
             line-height: 1.6;
-        }
-
-        html.dark-mode .contact-widget p {
-            color: #b0b0b0;
         }
 
         .widget-link {
@@ -414,7 +295,7 @@
         }
 
         .modal-content {
-            background: var(--bg-light);
+            background: var(--white);
             margin: 5% auto;
             padding: clamp(25px, 3vw, 40px);
             border-radius: 20px;
@@ -422,10 +303,6 @@
             max-width: 600px;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
             animation: slideDown 0.3s ease;
-        }
-
-        html.dark-mode .modal-content {
-            background: var(--bg-secondary);
         }
 
         @keyframes slideDown {
@@ -452,21 +329,12 @@
             color: #000;
         }
 
-        html.dark-mode .close-btn:hover {
-            color: #fff;
-        }
-
         .modal h2 {
             text-align: center;
             color: #0b3f86;
             margin-bottom: 25px;
             margin-top: 10px;
             font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        html.dark-mode .modal h2 {
-            color: #64b5f6;
         }
 
         .contact-form {
@@ -485,10 +353,6 @@
             font-size: 0.95rem;
         }
 
-        html.dark-mode .form-group label {
-            color: #64b5f6;
-        }
-
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -500,13 +364,6 @@
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
             background: var(--white);
             color: var(--text);
-        }
-
-        html.dark-mode .form-group input,
-        html.dark-mode .form-group textarea {
-            background: #0f1419;
-            color: var(--text);
-            border-color: rgba(15,91,183,0.2);
         }
 
         .form-group input:focus,
@@ -549,20 +406,11 @@
             font-size: 0.95rem;
         }
 
-        html.dark-mode .phone-info {
-            border-top-color: rgba(15,91,183,0.2);
-            color: #b0b0b0;
-        }
-
         .phone-info a {
             color: #0F5BB7;
             text-decoration: none;
             font-weight: 600;
             margin-right: 5px;
-        }
-
-        html.dark-mode .phone-info a {
-            color: #64b5f6;
         }
 
         .phone-info a:hover {
@@ -573,49 +421,9 @@
             background: rgba(15, 91, 183, 0.95);
             color: white;
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
+            padding: 25px 20px;
+            margin-top: 40px;
             font-size: 0.95rem;
-            transition: background 0.3s ease;
-            border-top: 3px solid var(--yellow);
-        }
-
-        html.dark-mode footer {
-            background: rgba(15, 91, 183, 0.7);
-        }
-
-        .footer-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-section h4 {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: var(--yellow);
-            font-weight: 700;
-        }
-
-        .footer-section a {
-            display: inline-block;
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            margin-bottom: 8px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: var(--yellow);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 20px;
-            font-size: 0.9rem;
         }
 
         @media (max-width: 900px) {
@@ -643,13 +451,6 @@
             }
             .logo-left {
                 max-width: 80px;
-            }
-
-            .theme-toggle {
-                top: 75px;
-                left: 15px;
-                padding: 10px 14px;
-                font-size: 16px;
             }
         }
 
@@ -688,45 +489,29 @@
                 height: 84px;
             }
             h1 {
-                font-size: clamp(1.2rem, 5.8vw, 1.6rem);
+                font-size: clamp(1rem, 5.8vw, 1.6rem);
                 line-height: 1.12;
                 margin-bottom: 8px;
                 white-space: normal;
                 word-break: break-word;
             }
             .subtitle {
-                font-size: clamp(0.85rem, 2.0vw, 0.95rem);
-                white-space: normal;
+                font-size: clamp(0.68rem, 2.0vw, 0.85rem);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 max-width: 100%;
                 margin: 0 auto;
-            }
-
-            .theme-toggle {
-                top: 70px;
-                left: 12px;
-                padding: 9px 12px;
-                font-size: 14px;
             }
 
             .modal-content {
                 width: 95%;
                 margin: 30% auto;
             }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Dark Mode Toggle Button -->
-    <button class="theme-toggle" onclick="toggleDarkMode()" title="تبديل الوضع الليلي">
-        <span id="theme-icon">🌙</span>
-        <span id="theme-text">ليلي</span>
-    </button>
 
     <header>
         <div class="header-logo header-logo-left">
@@ -736,7 +521,7 @@
         <div class="header-content">
             <h1>مركز الأمجاد للغات والتدريب</h1>
             <p class="subtitle">
-                تعليم لغات احترافي • معلمون متميزون • منهج معترف به دولياً
+                تابع حسابات المركز الرسمية على منصات التواصل الاجتماعي
             </p>
         </div>
 
@@ -744,21 +529,6 @@
             <img src="logo.png" alt="شعار مركز الأمجاد" class="logo-right">
         </div>
     </header>
-
-    <section class="trust-section">
-        <div class="trust-item">
-            <h3>✓ خبرة متميزة</h3>
-            <p>سنوات من التطوير والتميز</p>
-        </div>
-        <div class="trust-item">
-            <h3>✓ معلمون مؤهلون</h3>
-            <p>فريق تعليمي متخصص ومحترف</p>
-        </div>
-        <div class="trust-item">
-            <h3>✓ شهادات معترف بها</h3>
-            <p>برامج معتمدة دولياً</p>
-        </div>
-    </section>
 
     <section class="cards">
 
@@ -806,7 +576,7 @@
                 <img src="logo.w.png" alt="WhatsApp" />
             </div>
             <h2>قناة واتساب</h2>
-            <p>تابع قناة المركز الرسمية على واتساب للأخبار والعروض.</p>
+            <p>تابع قناة المركز الرسمية على واتساب.</p>
             <span class="btn">فتح القناة</span>
         </a>
 
@@ -817,8 +587,8 @@
             <div class="icon">
                 <img src="logo.p.png" alt="الموقع" />
             </div>
-            <h2>الموقع الجغرافي</h2>
-            <p>زيارة موقع المركز على خريطة جوجل - تجدنا بسهولة.</p>
+            <h2>الموقع</h2>
+            <p>زيارة موقع المركز على خريطة جوجل.</p>
             <span class="btn">عرض الموقع</span>
         </a>
 
@@ -826,26 +596,26 @@
 
     <!-- Contact Widgets Section - Main Page -->
     <section class="contact-widget-section">
-        <h2 class="contact-widget-title">🚀 هل لديك استفسار؟ تواصل معنا الآن!</h2>
+        <h2 class="contact-widget-title">هل لديك استفسار؟ تواصل معنا 👋</h2>
         <div class="contact-widgets">
             <div class="contact-widget" onclick="openContactModal()">
                 <span class="widget-icon">📧</span>
                 <h3>نموذج الاتصال</h3>
-                <p>أرسل رسالتك من خلال النموذج الآمن والسريع</p>
+                <p>أرسل لنا رسالة من خلال النموذج المتقدم</p>
                 <span class="widget-link">ملء النموذج</span>
             </div>
 
             <a href="tel:+967778005033" class="contact-widget">
                 <span class="widget-icon">📞</span>
                 <h3>اتصل بنا مباشرة</h3>
-                <p>تحدث مع فريقنا للحصول على ردود فورية وحقيقية</p>
-                <span class="widget-link">+967 778 005 033</span>
+                <p>تحدث معنا عبر الهاتف للردود الفورية</p>
+                <span class="widget-link">رقم الاتصال</span>
             </a>
 
             <a href="https://wa.me/967778005033" target="_blank" class="contact-widget">
                 <span class="widget-icon">💬</span>
-                <h3>واتساب فوري</h3>
-                <p>اضغط للتواصل المباشر عبر واتساب (رد خلال دقائق)</p>
+                <h3>واتساب</h3>
+                <p>اضغط للتواصل مباشرة عبر واتساب</p>
                 <span class="widget-link">ابدأ المحادثة</span>
             </a>
         </div>
@@ -893,59 +663,10 @@
     </div>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>عن المركز</h4>
-                <p>مركز الأمجاد متخصص في تعليم اللغات بمستويات عالية من الاحترافية والجودة.</p>
-            </div>
-            <div class="footer-section">
-                <h4>تواصل معنا</h4>
-                <a href="tel:+967778005033">📱 +967 778 005 033</a>
-                <a href="https://wa.me/967778005033" target="_blank">💬 واتساب</a>
-                <a href="mailto:info@alc.ye">📧 البريد</a>
-            </div>
-            <div class="footer-section">
-                <h4>تابعنا</h4>
-                <a href="https://www.instagram.com/alc_yemen" target="_blank">📸 إنستغرام</a>
-                <a href="https://www.facebook.com/ALC.Yemen" target="_blank">👍 فيسبوك</a>
-                <a href="https://maps.app.goo.gl/tRwSPfsoHGSUfkkf7" target="_blank">📍 الموقع</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>جميع الحقوق محفوظة © 2026 | مركز الأمجاد للغات والتدريب | تصميم: يحيى المريسي</p>
-        </div>
+        <p>جميع الحقوق محفوظة © 2026 | تصميم وتطوير: يحيى المريسي</p>
     </footer>
 
     <script>
-        // Dark Mode Toggle
-        function toggleDarkMode() {
-            const html = document.documentElement;
-            const isDarkMode = html.classList.toggle('dark-mode');
-            
-            localStorage.setItem('darkMode', isDarkMode);
-            
-            const themeIcon = document.getElementById('theme-icon');
-            const themeText = document.getElementById('theme-text');
-            
-            if (isDarkMode) {
-                themeIcon.textContent = '☀️';
-                themeText.textContent = 'فاتح';
-            } else {
-                themeIcon.textContent = '🌙';
-                themeText.textContent = 'ليلي';
-            }
-        }
-
-        // Load dark mode preference
-        window.addEventListener('load', function() {
-            const isDarkMode = localStorage.getItem('darkMode') === 'true';
-            if (isDarkMode) {
-                document.documentElement.classList.add('dark-mode');
-                document.getElementById('theme-icon').textContent = '☀️';
-                document.getElementById('theme-text').textContent = 'فاتح';
-            }
-        });
-
         // Modal Functions
         function openContactModal() {
             document.getElementById('contactModal').style.display = 'block';
