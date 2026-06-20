@@ -175,7 +175,6 @@ class Modal {
   constructor(modalId) {
     this.modal = document.getElementById(modalId);
     this.closeBtn = this.modal?.querySelector('[data-close-modal]');
-    this.overlay = this.modal;
     this.init();
   }
 
@@ -186,8 +185,8 @@ class Modal {
       this.closeBtn.addEventListener('click', () => this.close());
     }
 
-    this.overlay?.addEventListener('click', (e) => {
-      if (e.target === this.overlay) {
+    this.modal.addEventListener('click', (e) => {
+      if (e.target === this.modal) {
         this.close();
       }
     });
@@ -432,20 +431,17 @@ document.addEventListener('DOMContentLoaded', () => {
   new BackToTop();
 
   // Initialize modals
-  const contactModal = new Modal('contactModal');
   const registrationModal = new Modal('registrationModal');
 
   // Setup modal triggers
-  document.querySelectorAll('[data-open-contact-modal]').forEach((btn) => {
-    btn.addEventListener('click', () => contactModal.open());
-  });
-
   document.querySelectorAll('[data-open-registration-modal]').forEach((btn) => {
-    btn.addEventListener('click', () => registrationModal.open());
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      registrationModal.open();
+    });
   });
 
   // Initialize forms
-  new FormHandler('form[data-contact-form]');
   new FormHandler('form[data-registration-form]');
 });
 
